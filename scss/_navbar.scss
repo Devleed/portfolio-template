@@ -1,0 +1,132 @@
+.navigation {
+  height: 10vh;
+  //   border-bottom: 1px solid rgb(230, 225, 225);
+  display: flex;
+  align-items: center;
+  padding: 2rem 11rem;
+  background-color: rgb(63, 58, 58);
+  color: #fff;
+  transition: all 0.4s;
+
+  @include respond-max($small-420px) {
+    padding: 2rem;
+  }
+
+  &__logo {
+    margin-right: auto;
+    width: 8rem;
+    height: 6rem;
+  }
+
+  &__opts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 6rem;
+  }
+
+  &__opt {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+.opt-yellow {
+  background-color: $badge-color-primary;
+}
+.opt-green {
+  background-color: $badge-color-secondary;
+}
+.opt-red {
+  background-color: $badge-color-primary;
+}
+
+.navigation__content {
+  height: 0;
+  background-color: rgb(63, 58, 58);
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+
+  &-opened {
+    height: 100vh;
+
+    @include respond-max($small-420px) {
+      height: 80vh;
+    }
+
+    .navigation__list {
+      opacity: 1 !important;
+      visibility: visible !important;
+
+      transition: all 0.4s 0.4s !important;
+    }
+  }
+
+  .navigation__list {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all 0.4s 0s;
+  }
+  .navigation__item {
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 2.5rem;
+    padding: 2rem;
+    display: flex;
+    width: 20rem;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 2rem;
+
+    &:hover .navigation__opt {
+      transform: scale(25);
+    }
+
+    .navigation__opt {
+      margin-right: 2rem;
+      position: relative;
+      z-index: -1;
+      transition: all 0.5s;
+    }
+  }
+  .gear-icon {
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+
+    &-1 {
+      top: 60%;
+      right: 14%;
+      animation: rotate 2s linear infinite;
+    }
+    &-2 {
+      width: 8rem;
+      height: 8rem;
+      top: 50%;
+      right: 9%;
+      animation: rotate-inverse 2s linear infinite;
+    }
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-inverse {
+  100% {
+    transform: rotate(-360deg);
+  }
+}

@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @include respond-max($large-700px) {
+    font-size: 55%;
+  }
+  @include respond-max($medium-550px) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.social-stack {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.badge {
+  font-weight: 900;
+  background-image: linear-gradient(
+    to right bottom,
+    $badge-color-primary,
+    $badge-color-secondary,
+    $badge-color-primary
+  );
+  transition: all 0.2s;
+  color: white;
+  padding: 0 1rem;
+}

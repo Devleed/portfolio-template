@@ -1,0 +1,68 @@
+.info-section {
+  padding: 8rem 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  @include respond-max($medium-550px) {
+    text-align: center;
+    justify-content: center;
+  }
+
+  @include respond-max($largest-1000px) {
+    padding: 8rem;
+  }
+
+  @include respond-max($large-650px) {
+    padding: 6rem;
+  }
+
+  @include svg;
+}
+
+.greetings {
+  &-head {
+    font-size: 6rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #36373a;
+
+    @include respond-max($large-650px) {
+      font-size: 5.5rem;
+    }
+  }
+  &-para {
+    font-size: 2rem;
+    text-transform: capitalize;
+
+    // span {
+    //   font-weight: 900;
+    //   // text-decoration: line-through;
+    //   // text-decoration-thickness: 10px;
+    //   // text-decoration-color: rgba(255, 33, 33, 0.384);
+    //   background-color: rgb(240, 34, 34);
+    //   transition: all 0.2s;
+    //   color: white;
+    //   padding: 0 1rem;
+    // }
+  }
+}
+
+.picture {
+  width: 40rem;
+  height: 40rem;
+
+  @include respond-max($medium-550px) {
+    display: none;
+  }
+
+  @include respond-max($largest-1000px) {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

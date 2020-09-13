@@ -1,0 +1,98 @@
+.projects-section {
+  @include svg;
+  padding: 14rem;
+  text-align: center;
+  position: relative;
+
+  @include respond-max($largest-1200px) {
+    padding: 8rem;
+  }
+
+  @include respond-max($small-420px) {
+    padding: 6rem 0 0 0;
+  }
+
+  .greetings-head {
+    margin-bottom: 4rem;
+
+    @include respond-max($small-420px) {
+      padding: 0 6rem;
+    }
+  }
+
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: center;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.884);
+      width: 100%;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      transform: translateY(-100%);
+      transition: all 0.2s;
+    }
+
+    &__card {
+      position: relative;
+      height: 25rem;
+      background-color: #fff;
+      // border-radius: 1rem;
+      overflow: hidden;
+
+      @include respond-max($small-420px) {
+        width: 100%;
+      }
+
+      & > *:not(:last-child) {
+        margin-bottom: 5px;
+      }
+      &:hover .projects__content {
+        transform: translateY(0);
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__title {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    &__desc {
+      font-size: 1.5rem;
+      color: rgb(219, 93, 93);
+    }
+
+    &__link {
+      padding: 1rem;
+      background-color: #000;
+      color: #fff;
+      font-size: 1.2rem;
+      text-decoration: none;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+}

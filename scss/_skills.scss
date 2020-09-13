@@ -1,0 +1,129 @@
+.skills-section {
+  padding: 10rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 80rem;
+  @include secondary-svg;
+
+  @include respond-max($medium-550px) {
+    padding: 6rem;
+    height: auto;
+  }
+
+  @include respond-max($largest-1000px) {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @include respond-max($largest-1200px) {
+    .greetings-head {
+      font-size: 5.5rem;
+    }
+    .greetings-para {
+      font-size: 1.5rem;
+    }
+  }
+
+  @include respond-max($small-420px) {
+    .greetings-para {
+      font-size: 2rem;
+    }
+  }
+
+  .greetings-head {
+    color: #fff;
+  }
+}
+.about,
+.skills-showcase {
+  position: relative;
+}
+.skill-img-bg {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+
+  &-1 {
+    top: 8%;
+    left: 7%;
+  }
+  &-2 {
+    bottom: 8%;
+    left: 30%;
+  }
+  &-3 {
+    right: 20%;
+    top: 3%;
+  }
+}
+.skills-showcase {
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  @include respond-max($largest-1000px) {
+    margin: 5rem 0 0 0;
+  }
+}
+
+.skill {
+  width: 50rem;
+  display: flex;
+  font-size: 1.4rem;
+  position: relative;
+
+  @include respond-max($small-420px) {
+    width: 40rem;
+  }
+
+  &:hover &__level {
+    box-shadow: inset 0 0 0 2px #fff;
+  }
+
+  &:hover &__exp {
+    opacity: 1;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &__name {
+    flex-basis: 10rem;
+  }
+
+  &__name,
+  &__percentage {
+    padding: 1rem;
+    font-weight: 600;
+    background-image: linear-gradient(
+      to right bottom,
+      $badge-color-primary,
+      $badge-color-secondary,
+      $badge-color-primary
+    );
+  }
+
+  &__percentage {
+    margin-left: auto;
+  }
+  &__level {
+    background-color: #fff;
+  }
+  &__exp {
+    position: absolute;
+    top: -90%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.822);
+    font-size: 1.3rem;
+    padding: 7px;
+    color: #000;
+    border-radius: 3px;
+    opacity: 0;
+    transition: all 0.2s;
+  }
+}
