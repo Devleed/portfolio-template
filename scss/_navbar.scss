@@ -56,11 +56,6 @@
 
   &-opened {
     height: 100vh;
-
-    @include respond-max($small-420px) {
-      height: 80vh;
-    }
-
     .navigation__list {
       opacity: 1 !important;
       visibility: visible !important;

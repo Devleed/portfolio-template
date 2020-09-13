@@ -1,5 +1,5 @@
 .skills-section {
-  padding: 10rem;
+  padding: 5rem;
   color: white;
   display: flex;
   align-items: center;
@@ -9,7 +9,6 @@
   @include secondary-svg;
 
   @include respond-max($medium-550px) {
-    padding: 6rem;
     height: auto;
   }
 
@@ -28,6 +27,8 @@
   }
 
   @include respond-max($small-420px) {
+    padding: 5rem 2rem;
+
     .greetings-para {
       font-size: 2rem;
     }
@@ -75,7 +76,7 @@
   position: relative;
 
   @include respond-max($small-420px) {
-    width: 40rem;
+    width: 42rem;
   }
 
   &:hover &__level {

@@ -48,6 +48,10 @@
   align-items: center;
   justify-content: center;
 
+  @include respond-max($medium-550px) {
+    padding: 6rem 3rem;
+  }
+
   &-heading {
     color: #fff;
     font-size: 3rem;
@@ -58,7 +62,7 @@
   .contact__form {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 60%;
 
     @include respond-max($largest-1000px) {
       width: 70%;

@@ -6,6 +6,14 @@
     padding: 8rem;
   }
 
+  @include respond-max($medium-550px) {
+    padding: 7rem 3rem;
+  }
+
+  @include respond-max($small-420px) {
+    padding: 7rem 1rem;
+  }
+
   .greetings-head {
     text-align: center;
     margin-bottom: 4rem;
@@ -22,27 +30,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-basis: 20%;
-    background-image: linear-gradient(
-      to right bottom,
-      $badge-color-primary,
-      $badge-color-secondary,
-      $badge-color-primary
-    );
+    // flex-basis: 20%;
+    flex: 1;
+    @include tertiary-svg;
     color: white;
     padding: 5rem;
-    box-shadow: 0 10px 10px 10px #000;
+    margin: 1rem;
+    border-radius: 1rem;
 
-    clip-path: polygon(
-      20% 0%,
-      80% 0%,
-      100% 20%,
-      100% 80%,
-      80% 100%,
-      20% 100%,
-      0% 80%,
-      0% 20%
-    );
+    @include respond-max($medium-550px) {
+      flex-basis: 70%;
+    }
+
+    @include respond-max($small-420px) {
+      flex-basis: 90%;
+    }
 
     &__icon {
       width: 15rem;
