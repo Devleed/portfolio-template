@@ -15,25 +15,20 @@
     />
   </head>
   <body>
-    <nav class="navigation">
-      <img src="./images/wlogo-2.png" alt="logo" class="navigation__logo" />
-      <ul class="navigation__opts">
-        <span class="navigation__opt opt-yellow"></span>
-        <span class="navigation__opt opt-green"></span>
-        <span class="navigation__opt opt-red"></span>
-      </ul>
-    </nav>
     <div class="navigation__content">
       <ul class="navigation__list">
-        <li class="navigation__item">
-          <span class="navigation__opt opt-yellow"></span>Skills
-        </li>
-        <li class="navigation__item">
-          <span class="navigation__opt opt-green"></span>Projects
-        </li>
-        <li class="navigation__item">
-          <span class="navigation__opt opt-red"></span>Contact
-        </li>
+        <a href="#skills-section" class="navigation__item">
+          <li><span class="navigation__opt"></span>Skills</li>
+        </a>
+        <a href="#projects-section" class="navigation__item">
+          <li><span class="navigation__opt"></span>Projects</li>
+        </a>
+        <a href="#services-section" class="navigation__item">
+          <li><span class="navigation__opt"></span>Services</li>
+        </a>
+        <a href="#contact-section" class="navigation__item">
+          <li><span class="navigation__opt"></span>Contact</li>
+        </a>
       </ul>
 
       <div class="gear-icon gear-icon-1">
@@ -44,27 +39,17 @@
       </div>
     </div>
 
-    <div class="social-stack">
-      <a href="https://github.com/devleed" target="_blank"
-        ><img src="./images/github.svg" alt="github icon"
-      /></a>
-      <a
-        href="https://www.linkedin.com/in/muhammad-waleed-288a13196/"
-        target="_blank"
-        ><img src="./images/linkedin.svg" alt="linkedin icon"
-      /></a>
-      <a
-        href="https://stackoverflow.com/users/12075486/muhammad-waleed?tab=profile"
-        target="_blank"
-        ><img src="./images/stack-overflow.svg" alt="stack overflow icon"
-      /></a>
-      <a href="https://www.facebook.com/waleed.mujahid.58/" target="_blank"
-        ><img src="./images/facebook.svg" alt="facebook icon"
-      /></a>
-    </div>
+    <nav class="navigation">
+      <img src="./images/wlogo-2.png" alt="logo" class="navigation__logo" />
+      <ul class="navigation__opts">
+        <span class="navigation__opt"></span>
+        <span class="navigation__opt"></span>
+        <span class="navigation__opt"></span>
+      </ul>
+    </nav>
 
     <section class="main">
-      <div class="info-section">
+      <div class="info-section" id="info-section">
         <div class="greetings">
           <h2 class="greetings-head">Greetings,</h2>
           <p class="greetings-para">
@@ -78,7 +63,7 @@
         </div>
       </div>
 
-      <div class="skills-section">
+      <div class="skills-section" id="skills-section">
         <img
           src="./images/html-5.svg"
           alt="html icon"
@@ -147,7 +132,7 @@
         </div>
       </div>
 
-      <div class="projects-section">
+      <div class="projects-section" id="projects-section">
         <h2 class="greetings-head">what have i done?</h2>
         <div class="projects">
           <div class="projects__card">
@@ -193,7 +178,7 @@
         </div>
       </div>
 
-      <div class="services-section">
+      <div class="services-section" id="services-section">
         <h3 class="greetings-head">What do I offer?</h3>
         <div class="services">
           <div class="service">
@@ -224,7 +209,7 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contact-section">
       <div class="cta">
         <form action="#" class="contact__form">
           <h5 class="cta-heading">Message me!</h5>
@@ -249,6 +234,24 @@
       </div>
 
       <div class="about-info">
+        <div class="social-stack">
+          <a href="https://github.com/devleed" target="_blank"
+            ><img src="./images/github-2.svg" alt="github icon"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/muhammad-waleed-288a13196/"
+            target="_blank"
+            ><img src="./images/linkedin-2.svg" alt="linkedin icon"
+          /></a>
+          <a
+            href="https://stackoverflow.com/users/12075486/muhammad-waleed?tab=profile"
+            target="_blank"
+            ><img src="./images/stack-overflow-2.svg" alt="stack overflow icon"
+          /></a>
+          <a href="https://www.facebook.com/waleed.mujahid.58/" target="_blank"
+            ><img src="./images/facebook-2.svg" alt="facebook icon"
+          /></a>
+        </div>
         <p class="copyright">
           All right reserved Muhammad Waleed <span class="badge">©2020</span>
         </p>
@@ -256,10 +259,19 @@
     </footer>
 
     <script>
-      document.querySelector('.opt-green').addEventListener('click', () => {
-        document
-          .querySelector('.navigation__content')
-          .classList.toggle('navigation__content-opened');
+      [...document.querySelectorAll('.navigation__opt')].map(opt => {
+        opt.addEventListener('click', () => {
+          document
+            .querySelector('.navigation__content')
+            .classList.toggle('navigation__content-opened');
+        });
+      });
+      [...document.querySelectorAll('.navigation__item')].map(item => {
+        item.addEventListener('click', () => {
+          document
+            .querySelector('.navigation__content')
+            .classList.remove('navigation__content-opened');
+        });
       });
     </script>
   </body>
