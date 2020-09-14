@@ -12,8 +12,8 @@
     padding: 6rem 0 0 0;
   }
 
-  .greetings-head {
-    margin-bottom: 4rem;
+  .primary-heading {
+    margin-bottom: 6rem;
 
     @include respond-max($small-420px) {
       padding: 0 6rem;
@@ -49,6 +49,7 @@
       background-color: #fff;
       // border-radius: 1rem;
       overflow: hidden;
+      opacity: 0;
 
       @include respond-max($small-420px) {
         width: 100%;

@@ -1,0 +1,80 @@
+.primary-heading {
+  font-size: 5.5rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: $black-text;
+  position: relative;
+  opacity: 0;
+
+  &-animate {
+    animation: appear 1s forwards;
+    &::before {
+      animation: switch-left 1s forwards;
+    }
+    &::after {
+      animation: switch-right 1s forwards;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 20%;
+    height: 1rem;
+    background-image: linear-gradient(
+      to right bottom,
+      $badge-color-primary,
+      $badge-color-secondary,
+      $badge-color-primary
+    );
+    opacity: 0;
+
+    @include respond-max($medium-550px) {
+      display: none;
+    }
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  @include respond-max($large-650px) {
+    font-size: 5.5rem;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes switch-left {
+  from {
+    left: 100%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes switch-right {
+  from {
+    right: 100%;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}

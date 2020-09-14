@@ -80,7 +80,7 @@
           class="skill-img-bg skill-img-bg-3"
         />
         <div class="about">
-          <h2 class="greetings-head">What can I do?</h2>
+          <h2 class="primary-heading">What can I do?</h2>
           <p class="greetings-para">
             I can <br />
             <span class="badge">design</span><br />
@@ -95,37 +95,37 @@
         <div class="skills-showcase">
           <div class="skill">
             <div class="skill__name">HTML</div>
-            <div class="skill__level" style="width: 65%"></div>
+            <div class="skill__level skill__level-html"></div>
             <div class="skill__percentage">90%</div>
             <span class="skill__exp">4 years experience</span>
           </div>
           <div class="skill">
             <div class="skill__name">CSS</div>
-            <div class="skill__level" style="width: 65%"></div>
+            <div class="skill__level skill__level-css"></div>
             <div class="skill__percentage">90%</div>
             <span class="skill__exp">4 years experience</span>
           </div>
           <div class="skill">
             <div class="skill__name">Javascript</div>
-            <div class="skill__level" style="width: 50%"></div>
+            <div class="skill__level skill__level-js"></div>
             <div class="skill__percentage">70%</div>
             <span class="skill__exp">3 years experience</span>
           </div>
           <div class="skill">
             <div class="skill__name">React</div>
-            <div class="skill__level" style="width: 45%"></div>
+            <div class="skill__level skill__level-react"></div>
             <div class="skill__percentage">65%</div>
             <span class="skill__exp">2 years experience</span>
           </div>
           <div class="skill">
             <div class="skill__name">Node JS</div>
-            <div class="skill__level" style="width: 40%"></div>
+            <div class="skill__level skill__level-node"></div>
             <div class="skill__percentage">60%</div>
             <span class="skill__exp">3 years experience</span>
           </div>
           <div class="skill">
             <div class="skill__name">MongoDB</div>
-            <div class="skill__level" style="width: 30%"></div>
+            <div class="skill__level skill__level-mongo"></div>
             <div class="skill__percentage">50%</div>
             <span class="skill__exp">3 years experience</span>
           </div>
@@ -133,7 +133,7 @@
       </div>
 
       <div class="projects-section" id="projects-section">
-        <h2 class="greetings-head">what have i done?</h2>
+        <h2 class="primary-heading">what have i done?</h2>
         <div class="projects">
           <div class="projects__card">
             <img src="./images/2-2.jpg" alt="" class="projects__img" />
@@ -179,7 +179,7 @@
       </div>
 
       <div class="services-section" id="services-section">
-        <h3 class="greetings-head">What do I offer?</h3>
+        <h3 class="primary-heading">What do I offer?</h3>
         <div class="services">
           <div class="service">
             <img
@@ -259,19 +259,83 @@
     </footer>
 
     <script>
-      [...document.querySelectorAll('.navigation__opt')].map(opt => {
-        opt.addEventListener('click', () => {
+      document
+        .querySelector('.navigation__opts')
+        .addEventListener('click', () => {
           document
             .querySelector('.navigation__content')
             .classList.toggle('navigation__content-opened');
         });
-      });
       [...document.querySelectorAll('.navigation__item')].map(item => {
         item.addEventListener('click', () => {
           document
             .querySelector('.navigation__content')
             .classList.remove('navigation__content-opened');
         });
+      });
+
+      let skillAnimation = false,
+        projectsAnimation = false,
+        servicesAnimation = false;
+      window.addEventListener('scroll', () => {
+        const y = window.scrollY;
+
+        if (y > 150 && !skillAnimation) {
+          skillAnimation = true;
+          document
+            .querySelector('.skills-showcase')
+            .classList.add('skills-showcase-visible');
+
+          document
+            .querySelector('.about .primary-heading')
+            .classList.add('primary-heading-animate');
+
+          document.querySelector('.about .greetings-para').animate(
+            [
+              { transform: 'translateY(33%) skewX(20deg)', opacity: 0 },
+              { transform: 'translateY(0) skewX(0deg)', opacity: 1 }
+            ],
+            {
+              duration: 1000,
+              delay: 500,
+              fill: 'backwards'
+            }
+          );
+        }
+
+        if (y > 1000 && !projectsAnimation) {
+          projectsAnimation = true;
+          document
+            .querySelector('.projects-section .primary-heading')
+            .classList.add('primary-heading-animate');
+
+          [...document.querySelectorAll('.projects__card')].map((card, i) => {
+            card.animate(
+              [
+                { transform: 'translateY(50%)', opacity: 0 },
+                { transform: 'translateY(0)', opacity: 1 }
+              ],
+              { duration: 1000, delay: i * 500, fill: 'forwards' }
+            );
+          });
+        }
+
+        if (y > 1880 && !servicesAnimation) {
+          servicesAnimation = true;
+          document
+            .querySelector('.services-section .primary-heading')
+            .classList.add('primary-heading-animate');
+
+          [...document.querySelectorAll('.service')].map((service, i) => {
+            service.animate(
+              [
+                { transform: 'translateY(50%)', opacity: 0 },
+                { transform: 'translateY(0)', opacity: 1 }
+              ],
+              { duration: 1000, delay: i * 500, fill: 'forwards' }
+            );
+          });
+        }
       });
     </script>
   </body>

@@ -23,35 +23,26 @@
 
 .greetings {
   &-head {
+    color: $black-text;
     font-size: 6rem;
-    text-transform: capitalize;
-    font-weight: 500;
-    color: #36373a;
+    font-weight: 400;
 
-    @include respond-max($large-650px) {
-      font-size: 5.5rem;
-    }
+    animation: slide-in 1s;
   }
+
   &-para {
     font-size: 2rem;
     text-transform: capitalize;
 
-    // span {
-    //   font-weight: 900;
-    //   // text-decoration: line-through;
-    //   // text-decoration-thickness: 10px;
-    //   // text-decoration-color: rgba(255, 33, 33, 0.384);
-    //   background-color: rgb(240, 34, 34);
-    //   transition: all 0.2s;
-    //   color: white;
-    //   padding: 0 1rem;
-    // }
+    animation: slide-up 1s;
   }
 }
 
 .picture {
   width: 40rem;
   height: 40rem;
+
+  animation: expand 1s;
 
   @include respond-max($medium-550px) {
     display: none;
@@ -65,5 +56,36 @@
   img {
     width: 100%;
     height: 100%;
+  }
+}
+
+@keyframes expand {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
