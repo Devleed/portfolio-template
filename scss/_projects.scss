@@ -31,7 +31,7 @@
       left: 0;
       text-align: center;
       height: 100%;
-      background-color: rgba(255, 255, 255, 0.884);
+      background-color: rgba(255, 255, 255, 0.938);
       width: 100%;
       padding: 2rem;
       display: flex;
@@ -46,10 +46,16 @@
     &__card {
       position: relative;
       height: 25rem;
-      background-color: #fff;
-      // border-radius: 1rem;
       overflow: hidden;
       opacity: 0;
+      border: 1px solid rgb(224, 224, 224);
+      margin: 1rem;
+
+      max-width: 44.4rem;
+
+      @include respond-max($large-650px) {
+        margin: 0;
+      }
 
       @include respond-max($small-420px) {
         width: 100%;
@@ -75,7 +81,11 @@
 
     &__desc {
       font-size: 1.5rem;
-      color: rgb(219, 93, 93);
+    }
+
+    &__skills {
+      font-size: 1.4rem;
+      color: rgb(241, 105, 105);
     }
 
     &__link {

@@ -23,3 +23,12 @@
     @content;
   }
 }
+
+// theme mixin
+@mixin theme($light: true) {
+  $primary-color: if($light, #fff, #000);
+  $secondary-color: if($light, #bebebe, red);
+  $text-color: if($light, #000, #fff);
+
+  @content;
+}

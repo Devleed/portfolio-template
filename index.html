@@ -5,259 +5,315 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Waleed's Portfolio</title>
     <link rel="stylesheet" href="./css/main.css" />
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
       rel="stylesheet"
-    />
+    /> -->
   </head>
   <body>
-    <div class="navigation__content">
-      <ul class="navigation__list">
-        <a href="#skills-section" class="navigation__item">
-          <li><span class="navigation__opt"></span>Skills</li>
-        </a>
-        <a href="#projects-section" class="navigation__item">
-          <li><span class="navigation__opt"></span>Projects</li>
-        </a>
-        <a href="#services-section" class="navigation__item">
-          <li><span class="navigation__opt"></span>Services</li>
-        </a>
-        <a href="#contact-section" class="navigation__item">
-          <li><span class="navigation__opt"></span>Contact</li>
-        </a>
-      </ul>
+    <div class="wrapper">
+      <div class="navigation__content">
+        <ul class="navigation__list">
+          <a href="#skills-section" class="navigation__item">
+            <li><span class="navigation__opt"></span>Skills</li>
+          </a>
+          <a href="#projects-section" class="navigation__item">
+            <li><span class="navigation__opt"></span>Projects</li>
+          </a>
+          <a href="#services-section" class="navigation__item">
+            <li><span class="navigation__opt"></span>Services</li>
+          </a>
+          <a href="#contact-section" class="navigation__item">
+            <li><span class="navigation__opt"></span>Contact</li>
+          </a>
+        </ul>
 
-      <div class="gear-icon gear-icon-1">
-        <img src="./images/gear.svg" alt="gear icon" />
+        <div class="gear-icon gear-icon-1">
+          <img src="./images/gear.svg" alt="gear icon" />
+        </div>
+        <div class="gear-icon gear-icon-2">
+          <img src="./images/gear.svg" alt="gear icon" />
+        </div>
       </div>
-      <div class="gear-icon gear-icon-2">
-        <img src="./images/gear.svg" alt="gear icon" />
-      </div>
+
+      <nav class="navigation">
+        <img src="./images/wlogo-2.png" alt="logo" class="navigation__logo" />
+        <ul class="navigation__opts">
+          <span class="navigation__opt"></span>
+          <span class="navigation__opt"></span>
+          <span class="navigation__opt"></span>
+        </ul>
+      </nav>
+
+      <section class="main">
+        <div class="info-section" id="info-section">
+          <div class="greetings">
+            <h2 class="greetings-head">Greetings,</h2>
+            <p class="greetings-para">
+              my name is <span class="badge">waleed</span> <br />
+              and i'm a full stack web developer.
+            </p>
+          </div>
+
+          <div class="picture">
+            <img src="./images/headshot-colored.png" />
+          </div>
+        </div>
+
+        <div class="skills-section" id="skills-section">
+          <img
+            src="./images/html-5.svg"
+            alt="html icon"
+            class="skill-img-bg skill-img-bg-1"
+          />
+          <img
+            src="./images/css.svg"
+            alt="css icon"
+            class="skill-img-bg skill-img-bg-2"
+          />
+          <img
+            src="./images/nodejs.svg"
+            alt="node js icon"
+            class="skill-img-bg skill-img-bg-3"
+          />
+          <div class="about">
+            <h2 class="primary-heading">What can I do?</h2>
+            <p class="greetings-para">
+              I can <br />
+              <span class="badge">design</span><br />
+              <span class="badge">develop</span><br />
+              and <span class="badge">optimize</span> <br />
+              a Website. <br />
+              I love to design <span class="badge">UI / UX</span> for frontend
+              <br />
+              and to develop <span class="badge">API's</span> for backend.
+            </p>
+          </div>
+          <div class="skills-showcase">
+            <div class="skill">
+              <div class="skill__name">HTML</div>
+              <div class="skill__level skill__level-html"></div>
+              <div class="skill__percentage">90%</div>
+              <span class="skill__exp">4 years experience</span>
+            </div>
+            <div class="skill">
+              <div class="skill__name">CSS</div>
+              <div class="skill__level skill__level-css"></div>
+              <div class="skill__percentage">90%</div>
+              <span class="skill__exp">4 years experience</span>
+            </div>
+            <div class="skill">
+              <div class="skill__name">Javascript</div>
+              <div class="skill__level skill__level-js"></div>
+              <div class="skill__percentage">70%</div>
+              <span class="skill__exp">3 years experience</span>
+            </div>
+            <div class="skill">
+              <div class="skill__name">React</div>
+              <div class="skill__level skill__level-react"></div>
+              <div class="skill__percentage">65%</div>
+              <span class="skill__exp">2 years experience</span>
+            </div>
+            <div class="skill">
+              <div class="skill__name">Node JS</div>
+              <div class="skill__level skill__level-node"></div>
+              <div class="skill__percentage">60%</div>
+              <span class="skill__exp">3 years experience</span>
+            </div>
+            <div class="skill">
+              <div class="skill__name">MongoDB</div>
+              <div class="skill__level skill__level-mongo"></div>
+              <div class="skill__percentage">50%</div>
+              <span class="skill__exp">3 years experience</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-section" id="projects-section">
+          <h2 class="primary-heading">what have i done?</h2>
+          <div class="projects">
+            <div class="projects__card">
+              <img
+                src="./images/medify.png"
+                alt="medify"
+                class="projects__img"
+              />
+              <div class="projects__content">
+                <h5 class="projects__title">Medify</h5>
+                <p class="projects__desc">A medicine search engine</p>
+                <p class="projects__skills">React / Redux / firebase</p>
+                <a
+                  href="https://github.com/Devleed/Medify-End"
+                  target="_blank"
+                  class="projects__link"
+                  ><img src="./images/github-2.svg" />Github repo</a
+                >
+              </div>
+            </div>
+            <div class="projects__card">
+              <img
+                src="./images/gg.png"
+                alt="glorigy github"
+                class="projects__img"
+              />
+              <div class="projects__content">
+                <h5 class="projects__title">Glorify Github</h5>
+                <p class="projects__desc">Github repositories timeline</p>
+                <p class="projects__skills">
+                  Next JS / Github API <br />
+                  under-development
+                </p>
+                <a
+                  href="https://github.com/Devleed/Github-timeline"
+                  target="_blank"
+                  class="projects__link"
+                  ><img src="./images/github-2.svg" />Github repo</a
+                >
+              </div>
+            </div>
+            <div class="projects__card">
+              <img
+                src="./images/natours.png"
+                alt="natours"
+                class="projects__img"
+              />
+              <div class="projects__content">
+                <h5 class="projects__title">Natours</h5>
+                <p class="projects__desc">Redesign of official natours</p>
+                <p class="projects__skills">HTML / CSS / Sass</p>
+                <a
+                  href="https://github.com/Devleed/natours"
+                  target="_blank"
+                  class="projects__link"
+                  ><img src="./images/github-2.svg" />Github repo</a
+                >
+              </div>
+            </div>
+            <div class="projects__card">
+              <img
+                src="./images/megapack.png"
+                alt="megapack"
+                class="projects__img"
+              />
+              <div class="projects__content">
+                <h5 class="projects__title">Megapack</h5>
+                <p class="projects__desc">Pixfort's redesign</p>
+                <p class="projects__skills">HTML / CSS / Sass / Javascript</p>
+                <a
+                  href="https://github.com/devleed/medify"
+                  target="_blank"
+                  s
+                  class="projects__link"
+                  ><img src="./images/github-2.svg" />Github repo</a
+                >
+              </div>
+            </div>
+            <div class="projects__card">
+              <img src="./images/elic.png" alt="elic" class="projects__img" />
+              <div class="projects__content">
+                <h5 class="projects__title">Elic</h5>
+                <p class="projects__desc">Themeforest nova redesign</p>
+                <p class="projects__skills">HTML / CSS / Sass / Javascript</p>
+                <a
+                  href="https://github.com/devleed/elic"
+                  target="_blank"
+                  s
+                  class="projects__link"
+                  ><img src="./images/github-2.svg" />Github repo</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="services-section" id="services-section">
+          <h3 class="primary-heading">What do I offer?</h3>
+          <div class="services">
+            <div class="service">
+              <img
+                src="./images/responsive.svg"
+                alt="smartphone icon"
+                class="service__icon"
+              />
+              <h3 class="service__title">Responsive design</h3>
+            </div>
+            <div class="service">
+              <img
+                src="./images/time.svg"
+                alt="clock icon"
+                class="service__icon"
+              />
+              <h3 class="service__title">Fast delivery</h3>
+            </div>
+            <div class="service">
+              <img
+                src="./images/optimize.svg"
+                alt="map icon"
+                class="service__icon"
+              />
+              <h3 class="service__title">Optimized quality</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer" id="contact-section">
+        <div class="cta">
+          <form action="#" class="contact__form">
+            <h5 class="cta-heading">Message me!</h5>
+            <input
+              type="text"
+              class="form__input"
+              placeholder="Enter your name"
+            />
+            <input
+              type="email"
+              class="form__input"
+              placeholder="Enter your email"
+            />
+            <textarea
+              class="form__input message-box"
+              id="message-box"
+              cols="30"
+              rows="10"
+              placeholder="Enter your message"
+            ></textarea>
+          </form>
+        </div>
+
+        <div class="about-info">
+          <div class="social-stack">
+            <a href="https://github.com/devleed" target="_blank"
+              ><img src="./images/github-2.svg" alt="github icon"
+            /></a>
+            <a
+              href="https://www.linkedin.com/in/muhammad-waleed-288a13196/"
+              target="_blank"
+              ><img src="./images/linkedin-2.svg" alt="linkedin icon"
+            /></a>
+            <a
+              href="https://stackoverflow.com/users/12075486/muhammad-waleed?tab=profile"
+              target="_blank"
+              ><img
+                src="./images/stack-overflow-2.svg"
+                alt="stack overflow icon"
+            /></a>
+            <a
+              href="https://www.facebook.com/waleed.mujahid.58/"
+              target="_blank"
+              ><img src="./images/facebook-2.svg" alt="facebook icon"
+            /></a>
+          </div>
+          <p class="copyright">
+            All right reserved Muhammad Waleed <span class="badge">©2020</span>
+          </p>
+        </div>
+      </footer>
     </div>
-
-    <nav class="navigation">
-      <img src="./images/wlogo-2.png" alt="logo" class="navigation__logo" />
-      <ul class="navigation__opts">
-        <span class="navigation__opt"></span>
-        <span class="navigation__opt"></span>
-        <span class="navigation__opt"></span>
-      </ul>
-    </nav>
-
-    <section class="main">
-      <div class="info-section" id="info-section">
-        <div class="greetings">
-          <h2 class="greetings-head">Greetings,</h2>
-          <p class="greetings-para">
-            my name is <span class="badge">waleed</span> <br />
-            and i'm a full stack web developer.
-          </p>
-        </div>
-
-        <div class="picture">
-          <img src="./images/headshot-colored.png" />
-        </div>
-      </div>
-
-      <div class="skills-section" id="skills-section">
-        <img
-          src="./images/html-5.svg"
-          alt="html icon"
-          class="skill-img-bg skill-img-bg-1"
-        />
-        <img
-          src="./images/css.svg"
-          alt="css icon"
-          class="skill-img-bg skill-img-bg-2"
-        />
-        <img
-          src="./images/nodejs.svg"
-          alt="node js icon"
-          class="skill-img-bg skill-img-bg-3"
-        />
-        <div class="about">
-          <h2 class="primary-heading">What can I do?</h2>
-          <p class="greetings-para">
-            I can <br />
-            <span class="badge">design</span><br />
-            <span class="badge">develop</span><br />
-            and <span class="badge">optimize</span> <br />
-            a Website. <br />
-            I love to design <span class="badge">UI / UX</span> for frontend
-            <br />
-            and to develop <span class="badge">API's</span> for backend.
-          </p>
-        </div>
-        <div class="skills-showcase">
-          <div class="skill">
-            <div class="skill__name">HTML</div>
-            <div class="skill__level skill__level-html"></div>
-            <div class="skill__percentage">90%</div>
-            <span class="skill__exp">4 years experience</span>
-          </div>
-          <div class="skill">
-            <div class="skill__name">CSS</div>
-            <div class="skill__level skill__level-css"></div>
-            <div class="skill__percentage">90%</div>
-            <span class="skill__exp">4 years experience</span>
-          </div>
-          <div class="skill">
-            <div class="skill__name">Javascript</div>
-            <div class="skill__level skill__level-js"></div>
-            <div class="skill__percentage">70%</div>
-            <span class="skill__exp">3 years experience</span>
-          </div>
-          <div class="skill">
-            <div class="skill__name">React</div>
-            <div class="skill__level skill__level-react"></div>
-            <div class="skill__percentage">65%</div>
-            <span class="skill__exp">2 years experience</span>
-          </div>
-          <div class="skill">
-            <div class="skill__name">Node JS</div>
-            <div class="skill__level skill__level-node"></div>
-            <div class="skill__percentage">60%</div>
-            <span class="skill__exp">3 years experience</span>
-          </div>
-          <div class="skill">
-            <div class="skill__name">MongoDB</div>
-            <div class="skill__level skill__level-mongo"></div>
-            <div class="skill__percentage">50%</div>
-            <span class="skill__exp">3 years experience</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="projects-section" id="projects-section">
-        <h2 class="primary-heading">what have i done?</h2>
-        <div class="projects">
-          <div class="projects__card">
-            <img src="./images/2-2.jpg" alt="" class="projects__img" />
-            <div class="projects__content">
-              <h5 class="projects__title">Medify</h5>
-              <p class="projects__desc">React / Redux / firebase</p>
-              <a href="https://github.com/devleed/medify" class="projects__link"
-                ><img src="./images/github-2.svg" />Github repo</a
-              >
-            </div>
-          </div>
-          <div class="projects__card">
-            <img src="./images/jsposter.jpg" alt="" class="projects__img" />
-            <div class="projects__content">
-              <h5 class="projects__title">Medify</h5>
-              <p class="projects__desc">React / Redux / firebase</p>
-              <a href="https://github.com/devleed/medify" class="projects__link"
-                ><img src="./images/github-2.svg" />Github repo</a
-              >
-            </div>
-          </div>
-          <div class="projects__card">
-            <img src="./images/node.png" alt="" class="projects__img" />
-            <div class="projects__content">
-              <h5 class="projects__title">Medify</h5>
-              <p class="projects__desc">React / Redux / firebase</p>
-              <a href="https://github.com/devleed/medify" class="projects__link"
-                ><img src="./images/github-2.svg" />Github repo</a
-              >
-            </div>
-          </div>
-          <div class="projects__card">
-            <img src="./images/db.webp" alt="" class="projects__img" />
-            <div class="projects__content">
-              <h5 class="projects__title">Medify</h5>
-              <p class="projects__desc">React / Redux / firebase</p>
-              <a href="https://github.com/devleed/medify" class="projects__link"
-                ><img src="./images/github-2.svg" />Github repo</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="services-section" id="services-section">
-        <h3 class="primary-heading">What do I offer?</h3>
-        <div class="services">
-          <div class="service">
-            <img
-              src="./images/responsive.svg"
-              alt="smartphone icon"
-              class="service__icon"
-            />
-            <h3 class="service__title">Responsive design</h3>
-          </div>
-          <div class="service">
-            <img
-              src="./images/time.svg"
-              alt="clock icon"
-              class="service__icon"
-            />
-            <h3 class="service__title">Fast delivery</h3>
-          </div>
-          <div class="service">
-            <img
-              src="./images/optimize.svg"
-              alt="map icon"
-              class="service__icon"
-            />
-            <h3 class="service__title">Optimized quality</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer" id="contact-section">
-      <div class="cta">
-        <form action="#" class="contact__form">
-          <h5 class="cta-heading">Message me!</h5>
-          <input
-            type="text"
-            class="form__input"
-            placeholder="Enter your name"
-          />
-          <input
-            type="email"
-            class="form__input"
-            placeholder="Enter your email"
-          />
-          <textarea
-            class="form__input message-box"
-            id="message-box"
-            cols="30"
-            rows="10"
-            placeholder="Enter your message"
-          ></textarea>
-        </form>
-      </div>
-
-      <div class="about-info">
-        <div class="social-stack">
-          <a href="https://github.com/devleed" target="_blank"
-            ><img src="./images/github-2.svg" alt="github icon"
-          /></a>
-          <a
-            href="https://www.linkedin.com/in/muhammad-waleed-288a13196/"
-            target="_blank"
-            ><img src="./images/linkedin-2.svg" alt="linkedin icon"
-          /></a>
-          <a
-            href="https://stackoverflow.com/users/12075486/muhammad-waleed?tab=profile"
-            target="_blank"
-            ><img src="./images/stack-overflow-2.svg" alt="stack overflow icon"
-          /></a>
-          <a href="https://www.facebook.com/waleed.mujahid.58/" target="_blank"
-            ><img src="./images/facebook-2.svg" alt="facebook icon"
-          /></a>
-        </div>
-        <p class="copyright">
-          All right reserved Muhammad Waleed <span class="badge">©2020</span>
-        </p>
-      </div>
-    </footer>
-
     <script>
       document
         .querySelector('.navigation__opts')
