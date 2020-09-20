@@ -1,6 +1,6 @@
 .projects-section {
   @include svg;
-  padding: 14rem;
+  padding: 14rem 6rem;
   text-align: center;
   position: relative;
 
@@ -51,7 +51,7 @@
       border: 1px solid rgb(224, 224, 224);
       margin: 1rem;
 
-      max-width: 44.4rem;
+      width: 39rem;
 
       @include respond-max($large-650px) {
         margin: 0;

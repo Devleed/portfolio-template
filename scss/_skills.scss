@@ -76,17 +76,20 @@
     .skill__level-css {
       animation: skill-65 1s 0.3s forwards;
     }
-    .skill__level-js {
+    .skill__level-sass {
       animation: skill-55 1s 0.6s forwards;
     }
+    .skill__level-js {
+      animation: skill-55 1s 0.9s forwards;
+    }
     .skill__level-react {
-      animation: skill-45 1s 0.9s forwards;
+      animation: skill-45 1s 1.3s forwards;
     }
     .skill__level-node {
-      animation: skill-30 1s 1.2s forwards;
+      animation: skill-30 1s 1.5s forwards;
     }
     .skill__level-mongo {
-      animation: skill-30 1s 1.5s forwards;
+      animation: skill-30 1s 1.8s forwards;
     }
   }
 }
@@ -151,7 +154,7 @@
   }
 }
 
-$skill-level: 65, 65, 55, 45, 30, 30;
+$skill-level: 65, 65, 55, 55, 45, 30, 30;
 
 @each $level in $skill-level {
   @keyframes skill-#{$level} {
